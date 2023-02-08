@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+            font: normal 18pt Arial;
+            color: red;
+            
+        }
+        h1 {
+            color: rgb(255, 204, 0);
+        }
+        p {
+            color: white
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos no DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Java Script</p>
+    <div>get Elements by Tag Name ()</div>
+    <div name="msg"> <strong>Elements By Name</strong></div>
+    <div id="msg">Elements by Id</div>
+    <div class="msg">Get Elements by Class Name ()</div>
+    <div id="msg2"> Get Elements by query Selector - id </div>
+    <div class="msg3">Get Elements by query Selector - class</div>
+
+    <script>
+       
+        var p1 = window.document.getElementsByTagName('div')[0] 
+        // window.document.write('Está escrito assim: ' +p1.innerHTML ) 
+        p1.innerText = 'Olá!'
+        p1.style.color = 'magenta'
+       
+        
+        var p1 = window.document.getElementById("msg")
+        // window.document.write('Serve para escrever') 
+        p1.innerText = 'Olá!'
+        p1.style.color = 'red'
+
+        var d = window.document.getElementsByName("msg")[0]
+        d.innerText = 'Olá!'
+        p1.style.color = 'Green'
+
+        var d2 = window.document.getElementsByClassName('msg')[0]
+        d2.innerText = "Olá!"
+        d2.style.color = 'blue'
+
+        var d3 = window.document.querySelector('div#msg2')
+        d3.innerText = "Olá!"
+        d3.style.color = "yellow" 
+
+        var d4 = window.document.querySelector('div.msg3')
+        d4.innerText = 'Olá!'
+        d4.style.color = "grey"
+
+
+
+
+    </script>
+</body>
+</html>
